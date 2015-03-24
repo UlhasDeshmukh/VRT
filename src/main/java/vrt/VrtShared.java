@@ -24,8 +24,8 @@ public class VrtShared {
 	
 	
 	public void setup() {
-		
-		try(InputStream resourceStream =  this.getClass().getResourceAsStream("config.properties")) {
+		try{
+		InputStream resourceStream =  this.getClass().getResourceAsStream("config.properties");
 		    props.load(resourceStream);
 		} catch (IOException e) {
 		      e.printStackTrace();
